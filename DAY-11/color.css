@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+
+#buttons {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  z-index: 1000;
+}
+
+
+button {
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e6e6e6;
+}
+
+
+@media (max-width: 600px) {
+  #buttons {
+    flex-direction: column;
+    top: 5px;
+    left: 5px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+}
